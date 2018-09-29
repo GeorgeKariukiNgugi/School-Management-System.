@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="729.0" prefWidth="832.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentsSchoolOfEducation.SemesterSelectionController">
+   <children>
+      <ImageView fx:id="view" fitHeight="127.0" fitWidth="841.0" layoutX="-3.0" pickOnBounds="true" preserveRatio="true" />
+      <Region layoutX="-4.0" layoutY="602.0" prefHeight="127.0" prefWidth="841.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="354.0" layoutY="623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="423.0" layoutY="662.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="416.0" layoutY="690.0" size="20" />
+      <Text layoutX="473.0" layoutY="661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="469.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <MaterialDesignIconView glyphName="EMAIL" layoutX="415.0" layoutY="722.0" size="22" />
+      <Text layoutX="469.0" layoutY="718.0" strokeType="OUTSIDE" strokeWidth="0.0" text="msu@gmail.com">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="203.0" layoutY="149.0" text="PLEASE SELECT THE SEMESTER YOU ARE CURRENTLY IN :" textFill="#0d06f2">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="203.0" layoutY="236.0" prefHeight="261.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-width: 2;">
+         <children>
+            <JFXButton onAction="#handleButton11" prefHeight="56.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="1 ST YR 1 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton12" prefHeight="58.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="1 ST YR 2 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton21" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="2 ND YR 1 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton22" prefHeight="57.0" prefWidth="192.0" style="-fx-background-color: aqua;" text="2 ND YR 2 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="539.0" layoutY="236.0" prefHeight="254.0" prefWidth="196.0" style="-fx-border-color: black; -fx-border-width: 2;">
+         <children>
+            <JFXButton onAction="#handleButton31" prefHeight="56.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="3 RD YR 1 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton32" prefHeight="58.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="3 RD YR 2 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton41" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="4 TH YR 1 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator prefHeight="12.0" prefWidth="196.0" style="-fx-background-color: black;" />
+            <JFXButton onAction="#handleButton42" prefHeight="50.0" prefWidth="196.0" style="-fx-background-color: aqua;" text="4 TH YR 2 SEM." textFill="#e80c0c">
+               <font>
+                  <Font name="Times New Roman Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

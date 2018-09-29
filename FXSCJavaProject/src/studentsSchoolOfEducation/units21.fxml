@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="751.0" prefWidth="989.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentsSchoolOfEducation.Units21Controller">
+   <children>
+      <ImageView fx:id="view" fitHeight="139.0" fitWidth="988.0" layoutX="-1.0" pickOnBounds="true" />
+      <Label layoutX="325.0" layoutY="155.0" text="UNIT REGISTRATION PAGE" textFill="#d30d0d" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="269.0" layoutY="238.0" text="select the units to register thensubmit them to the basket  :" textFill="#0c1beb" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="ccs101" layoutX="192.0" layoutY="328.0" text="EDU 201 Modules Of Teachimg.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="ccs102" layoutX="189.0" layoutY="398.0" text="EDU 202 Eductional Psycology.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="ccs103" layoutX="192.0" layoutY="470.0" text="EDU 203 Physical Education.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="ccs104" layoutX="542.0" layoutY="328.0" text="EDU 204 Baseline Education.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="ccs105" layoutX="537.0" layoutY="398.0" text="EDU 205 Claculus 1.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="ccs106" layoutX="534.0" layoutY="470.0" text="EDU 206 Time Management.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <Region layoutX="-1.0" layoutY="624.0" prefHeight="127.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="348.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="417.0" layoutY="681.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="410.0" layoutY="709.0" size="20" />
+      <Text layoutX="467.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="463.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <MaterialDesignIconView glyphName="EMAIL" layoutX="409.0" layoutY="741.0" size="22" />
+      <Text layoutX="463.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="msu@gmail.com">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="427.0" layoutY="199.0" text="First Year First Sem." textFill="#35c680" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="756.0" layoutY="551.0" prefHeight="51.0" prefWidth="136.0" ripplerFill="#12e47f" style="-fx-background-color: Green;" text="SUBMIT." textFill="#f8f3f3">
+         <font>
+            <Font name="Sitka Subheading Bold" size="19.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f8f7f7" glyphName="GAVEL" size="25" wrappingWidth="30.0" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="error" layoutX="308.0" layoutY="281.0" text="NO UNITS SELECTED FOR SUBMISSION." textFill="#eb0e0e" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

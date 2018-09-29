@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="992.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxscjavaproject.FXMLDocumentController">
+   <children>
+      <Text fill="#190fe4" layoutX="360.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CLICK TO SELECT A USER:" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="cmbx" layoutX="379.0" layoutY="280.0" onAction="#handleChaneInComboBox" prefHeight="31.0" prefWidth="235.0" />
+      <Region layoutX="-2.0" layoutY="549.0" prefHeight="140.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="342.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="416.0" layoutY="619.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="409.0" layoutY="647.0" size="20" />
+      <Text layoutX="466.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="462.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="view" fitHeight="116.0" fitWidth="992.0" pickOnBounds="true" />
+      <Label layoutX="162.0" layoutY="149.0" text="MASENO UNIVERSITY STAFF MANAGEMENT SYSTEM." textFill="#f80f0f" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="556.0" layoutY="501.0" text="In Case Of Any Difficulty Contact The IT Depertment.&#10;      System Manager :0792107437" textFill="#057926">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="103.0" layoutY="473.0" onAction="#handleExit" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: red;" text="EXIT .." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <MaterialDesignIconView glyphName="EMAIL" layoutX="408.0" layoutY="679.0" size="22" />
+      <Text layoutX="462.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text="msu@gmail.com">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="774.0" prefWidth="1041.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="changePersonalDetails.MainPageController">
+   <children>
+      <ImageView fx:id="view" fitHeight="134.0" fitWidth="1041.0" pickOnBounds="true" />
+      <Label layoutX="291.0" layoutY="147.0" text="STUDENT PERSONAL DETAILS PAGE." textFill="#e11111" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="261.0" text="Sudent Name :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="298.0" text="Reg Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="335.0" text="Programme :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblname" layoutX="230.0" layoutY="261.0" text="Sudent Name :" textFill="#1b03ee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbladmno" layoutX="230.0" layoutY="298.0" text="Sudent Name :" textFill="#1b03ee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="335.0" text="Sudent Name :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="topic" layoutX="417.0" layoutY="193.0" text="OPERATION TO BE PERFOMED." textFill="#e40a0a" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="384.0" text="Mobile Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="425.0" text="Email Adress :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="60.0" layoutY="467.0" text="Postal Adress :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="261.0" text="Postal Code :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="310.0" text="Home Resience :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="364.0" text="Next Of Kin Name :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="415.0" text="Next Of Kin Relationship :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="467.0" text="Next Of Kin Phone Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="mobile" layoutX="230.0" layoutY="379.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="email" layoutX="230.0" layoutY="420.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="postalAdress" layoutX="230.0" layoutY="462.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="postalCode" layoutX="739.0" layoutY="246.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="residence" layoutX="739.0" layoutY="295.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="nextOfKinName" layoutX="739.0" layoutY="349.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="nextOfKinRelationaship" layoutX="739.0" layoutY="400.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="nextOfKinPhoneNumber" layoutX="739.0" layoutY="452.0">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font></JFXTextField>
+      <Region layoutX="-7.0" layoutY="658.0" prefHeight="116.0" prefWidth="1056.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="389.0" layoutY="685.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="439.0" layoutY="736.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="442.0" layoutY="756.0" size="20" />
+      <Text layoutX="495.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="495.0" layoutY="753.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="655.0" layoutY="528.0" onAction="#handleSubmit" prefHeight="57.0" prefWidth="128.0" style="-fx-background-color: green;" text="SUBMIT ." textFill="#eee7e7">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#fffbfb" glyphName="GAVEL" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="883.0" layoutY="580.0" onAction="#handleExit" prefHeight="62.0" prefWidth="142.0" style="-fx-background-color: red;" text="EXIT .." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="59.0" layoutY="580.0" onAction="#handleGoBack" prefHeight="62.0" prefWidth="142.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
