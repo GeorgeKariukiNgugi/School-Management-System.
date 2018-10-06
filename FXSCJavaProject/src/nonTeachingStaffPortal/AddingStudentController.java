@@ -6,6 +6,7 @@
 package nonTeachingStaffPortal;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
 import java.net.URL;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 
 /**
  * FXML Controller class
@@ -32,10 +34,19 @@ public class AddingStudentController implements Initializable {
     public Label lblPrefix;
     public JFXButton next;
     public Label lblpre;
-     public Label lblpost;
+    public Label lblpost;
     public ComboBox depertment;
     public ComboBox programme;
     public JFXTextField admNos;
+    public JFXTextField fname;
+    public JFXTextField lname;
+    public JFXTextField sname;
+    public JFXTextField phone;
+    public JFXTextField email;
+    public JFXTextField idNo;
+    public JFXRadioButton male;
+    public JFXRadioButton female;
+    public Label control; 
     
     // CREATING ARRAYLISTS FOR THE DEPERMENTS .
     
@@ -61,7 +72,7 @@ public class AddingStudentController implements Initializable {
        depertment.setDisable(false);
        depertment.setValue("SELECT DEPERTMENT.");
        String value = school.getValue().toString().toLowerCase();
-       
+       String year = beginYear.getValue().toString();
       switch(value){
           case  "school of computing":
              // HandleClear();
@@ -70,7 +81,7 @@ public class AddingStudentController implements Initializable {
                SCIDepertments.add("CompTech");
                SCIDepertments.add("CompScience");
                depertment.getItems().addAll(SCIDepertments);
-              
+              lblpre.setText("CI");
               break;
           case  "school of education":
               //  HandleClear();
@@ -79,7 +90,7 @@ public class AddingStudentController implements Initializable {
                SEDepertments.add("Arts.");
                SEDepertments.add("Science.");
               depertment.getItems().addAll(SEDepertments);
-              
+               lblpre.setText("ED");
               break;
           case  "school of arts":
               // HandleClear();
@@ -88,17 +99,31 @@ public class AddingStudentController implements Initializable {
                SADepertments.add("Criminology.");
                SADepertments.add("Fine Arts.");
                depertment.getItems().addAll(SADepertments);
-              
+               lblpre.setText("AT");
+              break;
+          default:
+               depertment.setValue("SELECT DEPERTMENT.");
               break;
               
       }
+       switch(year){
+                     case "2016":
+                         lblpost.setText("016");
+                         break;
+                           case "2017":
+                         lblpost.setText("017");
+                         break;
+                           case "2018":
+                         lblpost.setText("018");
+                         break;
+                 }
     } 
     
      public void HandleComboboxDepertment(ActionEvent event){
-        // depertment.setValue("SELECT DEPERTMENT.");
+         //depertment.setValue("SELECT DEPERTMENT.");
          String value2 = depertment.getValue().toString().toLowerCase();
          programme.setDisable(false);
-        // programme.setValue("SELECT PROGRAMME.");
+       
          switch(value2){
              case "comptech":
                   // HandleClear();
@@ -149,7 +174,9 @@ public class AddingStudentController implements Initializable {
                  programme.getItems().addAll(SAProgramme);
                  
                  break;
+             default:
                  
+                 break;      
          }
          
         }
@@ -170,6 +197,58 @@ public class AddingStudentController implements Initializable {
             programme.getItems().clear();
              depertment.getItems().clear();
             
+      }
+      public void HandleNext(ActionEvent event){
+        
+          if("".equals(fname.getText())){
+            
+             fname.setPromptText("FILL IN THIS VALUE.");
+          }
+          else if("".equals(lname.getText())){
+            
+             lname.setPromptText("FILL IN THIS VALUE.");
+            // lname.getText().setFont("","","","");
+          }
+          else if("".equals(sname.getText())){
+            
+             sname.setPromptText("FILL IN THIS VALUE.");
+          }
+          else if("".equals(email.getText())){
+            
+             email.setPromptText("FILL IN THIS VALUE.");
+          }
+          else if("".equals(phone.getText())){
+            
+             phone.setPromptText("FILL IN THIS VALUE.");
+          }
+          else if("".equals(idNo.getText())){
+            
+             idNo.setPromptText("FILL IN THIS VALUE.");
+          }
+          else if(!(male.isSelected()) && !(female.isSelected())){
+              control.setVisible(true);
+              control.setText("SET THE GENDER OF STUDENT.");
+          }
+          else if(beginYear.getValue().toString().equals("Choose Year .") ){
+              control.setVisible(true);
+              control.setText("SET THE YEAR OF ADDMISSION OF THE STUDENT."); 
+          }
+          else if((campus.getValue().toString()).equals("Select Campus .")){
+               control.setVisible(true);
+              control.setText("SET THE CAMPUS OF THE STUDENT."); 
+          } 
+          else if(programme.getValue().toString().toLowerCase().equals("")){
+                 control.setVisible(true);
+              control.setText("SET THE PROGRAMME OF THE STUDENT."); 
+          }
+          else if("".equals(admNos.getText())){
+               control.setVisible(true);
+              control.setText("SET THE ADMISSON NUMBER F THE STUDENT.");
+          }
+          else{
+            control.setVisible(true);
+              control.setText("ALL VALUES SET.");
+          }
       }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
