@@ -56,7 +56,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="204.0" layoutY="271.0" promptText="First Name :">
+      <JFXTextField fx:id="fname" alignment="CENTER" layoutX="204.0" layoutY="271.0" promptText="First Name :">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -77,12 +77,12 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="616.0" layoutY="272.0" promptText="Second Name  :">
+      <JFXTextField fx:id="lname" alignment="CENTER" layoutX="616.0" layoutY="272.0" promptText="Second Name  :">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXTextField>
-      <Label layoutX="869.0" layoutY="256.0" text="Third Name  :">
+      <Label layoutX="869.0" layoutY="256.0" text="Sur Name">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
@@ -93,12 +93,12 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="1022.0" layoutY="272.0" promptText="Third Name  :">
+      <JFXTextField fx:id="sname" alignment="CENTER" layoutX="1022.0" layoutY="272.0" promptText="Sur Name :">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </JFXTextField>
-      <JFXRadioButton layoutX="170.0" layoutY="337.0" text="Male" textFill="#f20d0d">
+      <JFXRadioButton fx:id="male" layoutX="170.0" layoutY="337.0" text="Male" textFill="#f20d0d">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -117,7 +117,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXRadioButton layoutX="170.0" layoutY="369.0" text="Female ." textFill="#f20d0d" toggleGroup="$sex">
+      <JFXRadioButton fx:id="female" layoutX="170.0" layoutY="369.0" text="Female ." textFill="#f20d0d" toggleGroup="$sex">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -133,7 +133,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="616.0" layoutY="341.0" promptText="Phone Number .">
+      <JFXTextField fx:id="phone" alignment="CENTER" layoutX="616.0" layoutY="341.0" promptText="Phone Number .">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -149,7 +149,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="1043.0" layoutY="341.0" promptText="Email Address">
+      <JFXTextField fx:id="email" alignment="CENTER" layoutX="1043.0" layoutY="341.0" promptText="Email Address">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -165,7 +165,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXTextField alignment="CENTER" layoutX="214.0" layoutY="421.0" promptText="ID Number :">
+      <JFXTextField fx:id="idNo" alignment="CENTER" layoutX="214.0" layoutY="421.0" promptText="ID Number :">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -222,7 +222,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <ComboBox fx:id="depertment" disable="true" layoutX="678.0" layoutY="581.0" onAction="#HandleComboboxDepertment" prefHeight="31.0" prefWidth="182.0" />
+      <ComboBox fx:id="depertment" disable="true" layoutX="678.0" layoutY="581.0" onAction="#HandleComboboxDepertment" prefHeight="31.0" prefWidth="182.0" promptText="SELECT DEPERTMENT" />
       <Label layoutX="941.0" layoutY="565.0" text="Programme :">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
@@ -234,7 +234,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <ComboBox fx:id="programme" disable="true" layoutX="1094.0" layoutY="581.0" onAction="#HandleComboBoxProramme" prefHeight="31.0" prefWidth="182.0" />
+      <ComboBox fx:id="programme" disable="true" layoutX="1094.0" layoutY="581.0" onAction="#HandleComboBoxProramme" prefHeight="31.0" prefWidth="182.0" promptText="SELECT PRORAMME." />
       <Label layoutX="281.0" layoutY="668.0" text="ADMISSION NUMBER :" textFill="#e10808">
          <font>
             <Font name="Times New Roman Bold" size="25.0" />
@@ -281,7 +281,7 @@
             <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
          </graphic>
       </JFXButton>
-      <JFXButton fx:id="next" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="1025.0" layoutY="734.0" prefHeight="102.0" prefWidth="253.0" style="-fx-background-color: green;" text="NEXT TO COMPLETE ." textFill="#f5eeee">
+      <JFXButton fx:id="next" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="1025.0" layoutY="734.0" onAction="#HandleNext" prefHeight="102.0" prefWidth="253.0" style="-fx-background-color: green;" text="NEXT TO COMPLETE ." textFill="#f5eeee">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
          </font>
@@ -289,5 +289,10 @@
             <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_RIGHT" size="40" wrappingWidth="27.714284896850586" />
          </graphic>
       </JFXButton>
+      <Label fx:id="control" layoutX="608.0" layoutY="204.0" text="Label" textFill="#f50707" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
