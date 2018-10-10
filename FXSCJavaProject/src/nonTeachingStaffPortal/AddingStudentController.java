@@ -5,18 +5,27 @@
  */
 package nonTeachingStaffPortal;
 
+import classes.DatabaseConnection;
+import classes.backAndExit;
+import classes.loadNewPage;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXTextField;
+import java.math.BigInteger;
 import java.net.URL;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.paint.Color;
+import static javax.xml.bind.DatatypeConverter.parseInteger;
 
 /**
  * FXML Controller class
@@ -48,6 +57,31 @@ public class AddingStudentController implements Initializable {
     public JFXRadioButton female;
     public Label control; 
     
+    // DEFINING THE VARIABLES FOR THE DATA TO BE SET INTO THE DATABASE.
+    
+    String admnoVal ;//= lblpre.getText()+"/"+admNos.getText()+lblpost.getText();
+    String fnameVal;// = fname.getText() ;
+    String lnameVal;// = lname.getText();
+    String snameVal ;//= sname.getText();
+    String campusVal;// =  campus.getValue().toString();
+    int yearVal;// = (int) beginYear.getValue();
+    String depertmentVal;// = depertment.getValue().toString();
+    String programmeVal ;//= programme.getValue().toString();
+    int currentYear = 1;
+    int currentSem = 1;
+    BigInteger idNoVal ;//=  parseInteger(idNo.getText());
+    BigInteger phoneVal;// = parseInteger(phone.getText()); ;
+    String emailVal;// = email.getText();
+    String schoolVal;
+    String sql;
+    String phoneVerifictionString;
+    String idVerifictionString;
+    // DEFINING THE OBJECTS TO BE USED THAT ARE FROM THE CLASSES CREATED.
+    
+    loadNewPage newPage = new loadNewPage();
+    DatabaseConnection conn = new DatabaseConnection();
+    backAndExit buttons = new backAndExit();
+    
     // CREATING ARRAYLISTS FOR THE DEPERMENTS .
     
     // School Of Computing.
@@ -67,7 +101,14 @@ public class AddingStudentController implements Initializable {
     
     // THE METHOD CALLED WHEN THE CMBOBOX IS CLICKED.
    
+    public void HandleExit(ActionEvent event){
+        buttons.handleExit();
     
+    }
+    public void HandleGoBack(ActionEvent event){
+        buttons.handleBack("/nonTeachingStaffPortal/nonTeachingStaffHomePage.fxml");
+         ((Node)(event.getSource())).getScene().getWindow().hide();
+    }
     public void HandleComboBoxSchool(ActionEvent event){
        depertment.setDisable(false);
        depertment.setValue("SELECT DEPERTMENT.");
@@ -82,6 +123,7 @@ public class AddingStudentController implements Initializable {
                SCIDepertments.add("CompScience");
                depertment.getItems().addAll(SCIDepertments);
               lblpre.setText("CI");
+              schoolVal = "schoolofcomputing";
               break;
           case  "school of education":
               //  HandleClear();
@@ -91,6 +133,7 @@ public class AddingStudentController implements Initializable {
                SEDepertments.add("Science.");
               depertment.getItems().addAll(SEDepertments);
                lblpre.setText("ED");
+               schoolVal = "schoolofeducation";
               break;
           case  "school of arts":
               // HandleClear();
@@ -100,6 +143,7 @@ public class AddingStudentController implements Initializable {
                SADepertments.add("Fine Arts.");
                depertment.getItems().addAll(SADepertments);
                lblpre.setText("AT");
+               schoolVal = "schoolofarts";
               break;
           default:
                depertment.setValue("SELECT DEPERTMENT.");
@@ -198,12 +242,54 @@ public class AddingStudentController implements Initializable {
              depertment.getItems().clear();
             
       }
+   
       public void HandleNext(ActionEvent event){
-        
+          System.out.println("REACIN THE METHOD.");
+          if(!"".equals(phone.getText())){
+          try{
+         BigInteger phoneNumber = parseInteger(phone.getText());
+         phoneVal = phoneNumber;
+          }
+          catch(Exception ex){
+              System.out.println("PHONE NUMBER NOT VALID sololey");
+              phoneVerifictionString = "wrong";
+    //String emailVerifictionString;
+          } 
+          }
+          else {
+              control.setText("phone number is empty.");
+                  }
+            if(!"".equals(idNo.getText())){
+          try{
+         BigInteger IdNumber = parseInteger(phone.getText());
+         idNoVal = IdNumber;
+          }
+          catch(Exception ex){
+              System.out.println("IDNUMBER NOT VALID sololey.");
+               idVerifictionString = "wrong";
+          } 
+          }
+          else {
+              control.setText("id number is empty.");
+                  }
+          
           if("".equals(fname.getText())){
             
              fname.setPromptText("FILL IN THIS VALUE.");
           }
+          
+          //  LOOK INTO THIS ......
+          
+          else if ( "wrong".equals(idVerifictionString)){
+              control.setText(" ID NOT VALID OT IS NOT A NUMBER..");
+          }
+          else if ("wrong".equals(phoneVerifictionString)){
+                   control.setText(" PHONE NUMBEr NOT VALID OT IS NOT A NUMBER..");
+          }
+          
+          //  END OF LLOKING .
+          
+          
           else if("".equals(lname.getText())){
             
              lname.setPromptText("FILL IN THIS VALUE.");
@@ -221,11 +307,15 @@ public class AddingStudentController implements Initializable {
             
              phone.setPromptText("FILL IN THIS VALUE.");
           }
+          else if (phone.getText().length() != 10){
+              
+                  control.setText("THE PHONE NUMBER IS NOT VALID.");
+              }    
           else if("".equals(idNo.getText())){
             
              idNo.setPromptText("FILL IN THIS VALUE.");
           }
-          else if(!(male.isSelected()) && !(female.isSelected())){
+         /* else if(!(male.isSelected()) && !(female.isSelected())){
               control.setVisible(true);
               control.setText("SET THE GENDER OF STUDENT.");
           }
@@ -240,18 +330,53 @@ public class AddingStudentController implements Initializable {
           else if(programme.getValue().toString().toLowerCase().equals("")){
                  control.setVisible(true);
               control.setText("SET THE PROGRAMME OF THE STUDENT."); 
-          }
+          }*/
           else if("".equals(admNos.getText())){
                control.setVisible(true);
               control.setText("SET THE ADMISSON NUMBER F THE STUDENT.");
           }
           else{
+              System.out.println("no error reported.");
             control.setVisible(true);
-              control.setText("ALL VALUES SET.");
+             control.setText("ALL VALUES SET.");
+              
+               admnoVal = lblpre.getText()+"/"+admNos.getText()+"/"+lblpost.getText();
+               fnameVal = fname.getText() ;
+               lnameVal = lname.getText();
+               snameVal = sname.getText();
+               campusVal =  campus.getValue().toString();
+               yearVal = (int) beginYear.getValue();
+               depertmentVal = depertment.getValue().toString();
+               programmeVal = programme.getValue().toString();
+               currentYear = 1;
+               currentSem = 1;
+             
+               emailVal = email.getText();
+               
+               // THE SQL STATEMENT :: 
+               sql = "insert into "+ schoolVal+"(admno,fname,lname,surName,campus,idNumber,yearOfAdmission,currentYear,currentSemester,depertment,programme)values('"+admnoVal+"','"+fnameVal+"','"+lnameVal+"','"+snameVal+"','"+campusVal+"','"+idNoVal+"','"+yearVal+"','"+currentYear+"','"+currentSem+"','"+depertmentVal+"','"+programmeVal+"')";
+              
+              try {
+                  Statement statement = conn.co.createStatement();
+                  statement.executeUpdate(sql);
+                  String     sql2 = "insert into studentverification (username ,password) values ('"+admnoVal.toUpperCase()+"',"+idNoVal+")";
+                  statement.executeUpdate(sql2);
+              } catch (Exception ex) {
+                //  Logger.getLogger(AddingStudentController.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println(ex);
+                
+              }
+               
           }
       }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        // CONNECTING TO THE DATABASE.
+        
+        conn.Connect();
+        
+        
         ArrayList<Integer> years = new ArrayList<>();
         for(int i = 2016 ; i <= 2018 ; i++){
             years.add(i);

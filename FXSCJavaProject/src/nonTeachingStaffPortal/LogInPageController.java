@@ -52,8 +52,8 @@ backAndExit buttons = new backAndExit();
  textFileGetAdmno file = new textFileGetAdmno();
  
     public void HandleLogIn(ActionEvent event){
-         String   username = txtusername.getText();
-         String password = txtpass.getText();
+         String   username = txtusername.getText().toUpperCase();
+         String password = txtpass.getText().toUpperCase();
            if(username == null || password == null){
                
                lbl.setText("EMPTY FIELDS.");
@@ -71,7 +71,7 @@ backAndExit buttons = new backAndExit();
              
              if(resultset.next()){
                newPage.loadNewPage("/nonTeachingStaffPortal/nonTeachingStaffHomePage.fxml");
-              // ((Node)(event.getSource())).getScene().getWindow().hide();
+              ((Node)(event.getSource())).getScene().getWindow().hide();
              
               
              }

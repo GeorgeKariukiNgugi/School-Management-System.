@@ -273,7 +273,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </padding>
       </Label>
-      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="42.0" layoutY="772.0" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="42.0" layoutY="772.0" onAction="#HandleGoBack" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
@@ -289,7 +289,7 @@
             <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_RIGHT" size="40" wrappingWidth="27.714284896850586" />
          </graphic>
       </JFXButton>
-      <Label fx:id="control" layoutX="608.0" layoutY="204.0" text="Label" textFill="#f50707" visible="false">
+      <Label fx:id="control" layoutX="608.0" layoutY="204.0" text="Label" textFill="#f50707">
          <font>
             <Font name="Times New Roman Bold" size="25.0" />
          </font>

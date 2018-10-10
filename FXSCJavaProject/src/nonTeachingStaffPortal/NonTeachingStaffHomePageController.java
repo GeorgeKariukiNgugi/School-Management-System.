@@ -15,6 +15,7 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 
 /**
@@ -59,7 +60,12 @@ public class NonTeachingStaffHomePageController implements Initializable {
     }
     public void HandleAddStudent(ActionEvent event){
         loadPage.loadNewPage("/nonTeachingStaffPortal/addingStudent.fxml");
+        ((Node)(event.getSource())).getScene().getWindow().hide();
         
+    }
+    public void HandleGoBack(ActionEvent event){
+          loadPage.loadNewPage("/nonTeachingStaffPortal/logInPage.fxml");
+         ((Node)(event.getSource())).getScene().getWindow().hide();
     }
     @Override
     

@@ -114,7 +114,7 @@ public class StudentHomePageController implements Initializable {
             String substring = admissionNumber.substring(0, 2);
             System.out.println(substring);
             switch(substring){
-                case "ci":
+                case "CI":
                     System.out.println("SCHOOL OF COMPUTING.");
                     sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from schoolOfComputing where admno = '"+ admissionNumber+ "'";
                     statement = connect.co.createStatement();
@@ -143,7 +143,7 @@ public class StudentHomePageController implements Initializable {
                          
                      }
                     break;
-                case "sc":
+                case "SC":
                     System.out.println("SCHOOL OF BIOLOGICAL AND PHYSICAL SCIENCES..");
                      sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from  schoolofbioloicalandpysicalsciences where admno = '"+ admissionNumber+ "'";
                     statement = connect.co.createStatement();
@@ -172,7 +172,7 @@ public class StudentHomePageController implements Initializable {
                          
                      }
                     break;
-                case "md":
+                case "MD":
                     System.out.println("SCHOOL OF MEDICINE.");
                         sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from  schoolofmedicine where admno = '"+ admissionNumber+ "'";
                     statement = connect.co.createStatement();
@@ -201,7 +201,7 @@ public class StudentHomePageController implements Initializable {
                          
                      }
                     break;
-                case "mt":
+                case "MT":
                     System.out.println("SCHOOL OF MATHEMATICS.");
                           sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from  schoolofmaths where admno = '"+ admissionNumber+ "'";
                     statement = connect.co.createStatement();
@@ -230,7 +230,7 @@ public class StudentHomePageController implements Initializable {
                          
                      }
                     break;
-                case "ed":
+                case "ED":
                     System.out.println("SCHOOL OF EDUCATION.");
                           sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from  schoolofeducation where admno = '"+ admissionNumber+ "'";
                     statement = connect.co.createStatement();
@@ -259,7 +259,7 @@ public class StudentHomePageController implements Initializable {
                          
                      }
                     break;
-                case "at":
+                case "AT":
                     System.out.println("SCHOOL OF ARTS.");
                       sql = "SELECT concat(fName, ' ', lName),campus,depertment,programme,idNumber,yearOfAdmission,currentYear,currentSemester from  schoolofarts where admno = '"+ admissionNumber+ "'";
                       statement = connect.co.createStatement();
@@ -287,6 +287,9 @@ public class StudentHomePageController implements Initializable {
                          
                          
                      }
+                    break;
+                default:
+                    System.out.println("THE PARTICULAR SCHOOL NOT FOUND.");
                     break;
                     
             }

@@ -144,7 +144,7 @@
             <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
          </graphic>
       </JFXButton>
-      <JFXButton contentDisplay="TOP" layoutX="275.0" layoutY="664.0" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+      <JFXButton contentDisplay="TOP" layoutX="275.0" layoutY="664.0" onAction="#HandleGoBack" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
