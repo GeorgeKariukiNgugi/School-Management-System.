@@ -19,7 +19,7 @@ public class DatabaseConnection {
    public Connection co;
    public void Connect(){
         try {
-             co = DriverManager.getConnection("jdbc:mysql://localhost:3307/JavaProject","root","7205");
+             co = DriverManager.getConnection("jdbc:mysql://localhost:3308/JavaProject","root","7205");
             System.out.println("HELLO DATABASES;");
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
