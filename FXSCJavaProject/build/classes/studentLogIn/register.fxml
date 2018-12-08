@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="1023.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentLogIn.RegisterController">
+   <children>
+      <ImageView fitHeight="124.0" fitWidth="1023.0" pickOnBounds="true" AnchorPane.bottomAnchor="560.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@../images/maseno.png" />
+         </image>
+      </ImageView>
+      <Region layoutX="-2.0" layoutY="568.0" prefHeight="116.0" prefWidth="1023.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="373.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="423.0" layoutY="642.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="426.0" layoutY="662.0" size="20" />
+      <Text layoutX="479.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="479.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="219.0" layoutY="148.0" text="CHOOSE THE UNITS YOU WANT TO TAKE THIS SEMESTER." textFill="#f80606" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="878.0" layoutY="498.0" onAction="#HandleExit" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: red;" text="EXIT .." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="42.0" layoutY="498.0" onAction="#HandleGoBack" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="verify" layoutX="334.0" layoutY="185.0" text="      UNITS SUCCESSFULLY REGISTERED.&#10;PLEASE GO BACK TO VERIFY REITRATION." textFill="RED" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXCheckBox layoutX="227.0" layoutY="245.0" text=" CCS 101   PRINCIPLES OF PROGRAMMING LANGUAGES.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="227.0" layoutY="285.0" text=" CCS 102   PROGRAMMING IN C.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="227.0" layoutY="321.0" text="CCS 103   PROGRAMMING IN PASCALS .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="227.0" layoutY="354.0" text=" CCS 108   PRINCIPLES OF ACCOUNTING .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="227.0" layoutY="391.0" text=" CCS 112   PRINCIPLES OF PRPBABILITY THEORY .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox layoutX="227.0" layoutY="430.0" text="CCS 123   PATERN RECOGNITION  .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="618.0" layoutY="465.0" onAction="#HandleRegisterUnits" prefHeight="90.0" prefWidth="171.0" style="-fx-background-color: green;" text="REGISTER &#10;    UNITS" textFill="#eee7e7">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#fffbfb" glyphName="GAVEL" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

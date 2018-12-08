@@ -15,7 +15,7 @@
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="795.0" prefWidth="992.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentLogIn.StudentHomePageController">
    <children>
       <ImageView fx:id="view" fitHeight="133.0" fitWidth="992.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-      <Region layoutY="656.0" prefHeight="116.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" />
+      <Region layoutY="656.0" prefHeight="116.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Text layoutX="339.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
@@ -44,7 +44,7 @@
                </graphic>
             </JFXButton>
             <Separator prefHeight="8.0" prefWidth="183.0" style="-fx-background-color: black;" />
-            <JFXButton buttonType="RAISED" onAction="#handleRegisterUnits" prefHeight="56.0" prefWidth="183.0" style="-fx-background-color: aqua;" text="REGISTER UNITS ." textFill="#0e2ee4">
+            <JFXButton buttonType="RAISED" onAction="#HandleRegisterReal" prefHeight="56.0" prefWidth="183.0" style="-fx-background-color: aqua;" text="REGISTER UNITS ." textFill="#0e2ee4">
                <font>
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>
@@ -53,7 +53,7 @@
                </graphic>
             </JFXButton>
             <Separator prefHeight="8.0" prefWidth="183.0" style="-fx-background-color: black;" />
-            <JFXButton buttonType="RAISED" prefHeight="56.0" prefWidth="183.0" style="-fx-background-color: aqua;" text="VIEW RESULTS" textFill="#0b41f2">
+            <JFXButton buttonType="RAISED" onAction="#handleViewUnits" prefHeight="56.0" prefWidth="183.0" style="-fx-background-color: aqua;" text="VIEW UNITS" textFill="#0b41f2">
                <font>
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>

@@ -84,7 +84,7 @@
             <Font name="Times New Roman Bold" size="18.0" />
          </font>
       </Text>
-      <JFXButton contentDisplay="TOP" layoutX="34.0" layoutY="376.0" prefHeight="69.0" prefWidth="133.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+      <JFXButton contentDisplay="TOP" layoutX="34.0" layoutY="376.0" onAction="#handleGoBack" prefHeight="69.0" prefWidth="133.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
          </font>

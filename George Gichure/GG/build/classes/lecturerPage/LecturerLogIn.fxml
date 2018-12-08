@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="811.0" prefWidth="992.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturerPage.LecturerLogInController">
+   <children>
+      <ImageView fx:id="view" fitHeight="133.0" fitWidth="992.0" pickOnBounds="true" />
+      <Label layoutX="369.0" layoutY="188.0" text="Key In Your Details To Log In." textFill="#4c0bf2" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Label>
+      <FontAwesomeIconView fx:id="user" glyphName="USER" layoutX="347.0" layoutY="421.0" opacity="0.2" size="40" />
+      <JFXTextField fx:id="txtusername" alignment="CENTER" disable="true" layoutX="383.0" layoutY="389.0" prefHeight="31.0" prefWidth="207.0" promptText="username">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXTextField>
+      <FontAwesomeIconView fx:id="key" glyphName="KEY" layoutX="348.0" layoutY="525.0" opacity="0.2" size="40" />
+      <JFXPasswordField fx:id="txtpass" alignment="CENTER" disable="true" layoutX="389.0" layoutY="493.0" prefHeight="31.0" prefWidth="207.0" promptText="password">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </JFXPasswordField>
+      <Region layoutY="695.0" prefHeight="116.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="352.0" layoutY="722.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="402.0" layoutY="773.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="405.0" layoutY="793.0" size="20" />
+      <Text layoutX="458.0" layoutY="770.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="458.0" layoutY="790.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnLogIn" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="547.0" layoutY="545.0" onAction="#HandleLogIn" prefHeight="57.0" prefWidth="128.0" style="-fx-background-color: green;" text="LOG IN  ." textFill="#eee7e7">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="UNLOCK" size="20" style="-fx-fill: white;" />
+         </graphic>
+       
+      </JFXButton>
+      <JFXCheckBox fx:id="chk1" disable="true" layoutX="357.0" layoutY="608.0" text="Remember Me ." textFill="#ee0808">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXCheckBox>
+      <Text fill="#0e15f5" layoutX="559.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Password  ??" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="311.0" layoutY="140.0" text="LECTURER LOG IN PORTAL." textFill="#0d09ee" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbx" layoutX="362.0" layoutY="295.0" onAction="#handleComboBox" prefHeight="31.0" prefWidth="276.0">
+         <effect>
+            <Blend />
+         </effect>
+     </ComboBox>
+      <Label fx:id="lbl" layoutX="397.0" layoutY="236.0" text="Select A School So As To &#10;              LogIn." textFill="#f00c11">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Label>
+      <Text fx:id="username" disable="true" fill="#eb0707" layoutX="314.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName  :" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="password" disable="true" fill="#eb0707" layoutX="309.0" layoutY="470.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#107913" layoutX="596.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="In Case Of Any Difficulty Contact The IT Depertment.&#10;      System Manager :0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="16.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btngoBack" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="66.0" layoutY="616.0" onAction="#handleGoBack" prefHeight="57.0" prefWidth="128.0" style="-fx-background-color: blue;" text="GO BACK." textFill="#eee7e7">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="ARROW_LEFT" size="25" style="-fx-fill: white;" wrappingWidth="26.14285659790039" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

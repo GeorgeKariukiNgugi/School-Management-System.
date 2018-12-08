@@ -13,6 +13,7 @@ import com.jfoenix.controls.JFXTextField;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import classes.backAndExit;
 import classes.loadNewPage;
+import classes.textFileGetAdmno;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -64,17 +65,7 @@ public class LecturerLogInController implements Initializable {
       backAndExit handleButtons = new backAndExit();
       DatabaseConnection conn = new DatabaseConnection(); 
       loadNewPage  newPage = new loadNewPage();
-      public void handleComboBox(ActionEvent event){
-        btnLogIn.setDisable(false);
-        chk1.setDisable(false);
-        txtpass.setDisable(false);
-        txtusername.setDisable(false);
-        user.setOpacity(1.0);
-        key.setOpacity(1.0);
-        username.setVisible(true);
-        password.setVisible(true);
-        btngoBack.setDisable(false);
-    }
+      textFileGetAdmno file = new textFileGetAdmno();
        public void handleExit(ActionEvent e){
             System.exit(1);
         }  
@@ -93,17 +84,20 @@ public class LecturerLogInController implements Initializable {
                
                lbl.setText("EMPTY FIELDS.");
            }
-           sql = "select id from  nonstudentverification where username = '"+username+"' and password ='"+password+"'";
+           sql = "select password from  lecturerverification where username = '"+username+"'";
            
-           Statement statement;
+           
         try {
+            Statement statement;
             statement = conn.co.createStatement();
              ResultSet resultset;
              resultset = statement.executeQuery(sql);
              
              if(resultset.next()){
+                username = txtusername.getText();
                newPage.loadNewPage("/lecturerLogIn/homePage.fxml");
                ((Node)(event.getSource())).getScene().getWindow().hide();
+               file.setText(username);
              }
              else{
                    lbl.setText("WRONG CREDENTIALS.");
@@ -125,8 +119,7 @@ public class LecturerLogInController implements Initializable {
             File file = new File(urlx);
             Image image = new Image(file.toURI().toURL().toString());
             view.setImage(image);
-            cmbx.getItems().addAll("School Of Medicine","School Of Education","School Of Arts","School Of Biological And Physical Sciences","School Of Computing And Informatics","School Of Mathematics");
-            cmbx.setValue("      SELECT ..... ");
+            
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(LecturerLogInController.class.getName()).log(Level.SEVERE, null, ex);

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="874.0" prefWidth="1270.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nonTeachingStaffPortal.NonTeachingStaffHomePageController">
+   <children>
+      <ImageView fitHeight="148.0" fitWidth="1270.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/maseno.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="148.0" prefHeight="595.0" prefWidth="192.0">
+         <children>
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" ripplerFill="BLACK" style="-fx-background-color: AQUA;" text="PERSONAL DETAILS ." textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#HandleAddStudent" prefHeight="55.0" prefWidth="192.0" ripplerFill="BLACK" style="-fx-background-color: AQUA;" text="ADD STUDENT." textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" ripplerFill="BLACK" style="-fx-background-color: AQUA;" text="ADD TEACHIN STAFF" textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" ripplerFill="BLACK" style="-fx-background-color: AQUA;" text="ADD NON TEACHING ." textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" ripplerFill="BLACK" style="-fx-background-color: AQUA;" text="REMOVE STUDENT" textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton buttonType="RAISED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" ripplerFill="#030303" style="-fx-background-color: AQUA;" text="BLOCK SUDENT" textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" style="-fx-background-color: AQUA;" text="VIEW STUDENT DETAILS" textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" style="-fx-background-color: AQUA;" text="VIEW LECTURER DETAILS" textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" style="-fx-background-color: AQUA;" text="EDIT PERSONAL DETAILS." textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+            <Separator prefHeight="9.0" prefWidth="192.0" style="-fx-background-color: black;" />
+            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="192.0" style="-fx-background-color: AQUA;" text="EXIT." textFill="#0d14e8">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#140ddd" glyphName="THUMBS_ALT_UP" size="15" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Separator layoutX="187.0" layoutY="148.0" orientation="VERTICAL" prefHeight="595.0" prefWidth="5.0" style="-fx-background-color: black;" />
+      <Region layoutY="743.0" prefHeight="131.0" prefWidth="1270.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="478.0" layoutY="788.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="528.0" layoutY="839.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="531.0" layoutY="859.0" size="20" />
+      <Text layoutX="584.0" layoutY="836.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="584.0" layoutY="856.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="437.0" layoutY="162.0" text="NON TEACHING STAFF LOG IN." textFill="#1009ee" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="1056.0" layoutY="664.0" onAction="#HandleExit" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: red;" text="EXIT .." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="275.0" layoutY="664.0" onAction="#HandleGoBack" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </JFXButton>
+      <Label layoutX="250.0" layoutY="263.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="323.0" text="Reg No">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="372.0" text="Phone Number  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="426.0" text="Email Address :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="475.0" text="Postal Address  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="529.0" text="Postal Code  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblName" layoutX="445.0" layoutY="263.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRegNo" layoutX="445.0" layoutY="323.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPhoneNum" layoutX="445.0" layoutY="372.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblEmail" layoutX="445.0" layoutY="426.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPostalAdd" layoutX="445.0" layoutY="475.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPostalCode" layoutX="445.0" layoutY="529.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="741.0" layoutY="257.0" text="Depertment  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="743.0" layoutY="323.0" text="Job Group  : ">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="743.0" layoutY="372.0" text="Home Residence :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="741.0" layoutY="426.0" text="Next Of Kin Phone Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="751.0" layoutY="529.0" text="Gross Salary :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="751.0" layoutY="571.0" text="Net  Salary  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDepert" layoutX="936.0" layoutY="257.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblJobGroup" layoutX="938.0" layoutY="323.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblResidence" layoutX="938.0" layoutY="372.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNextOfKin" layoutX="1023.0" layoutY="426.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="946.0" layoutY="529.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="946.0" layoutY="571.0" text="Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="793.0" layoutY="486.0" text="FINANCE DETAILS   ." textFill="#150aeb" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

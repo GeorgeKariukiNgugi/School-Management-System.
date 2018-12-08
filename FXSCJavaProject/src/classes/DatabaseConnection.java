@@ -8,6 +8,7 @@ package classes;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,18 +18,16 @@ import java.util.logging.Logger;
  */
 public class DatabaseConnection {
    public Connection co;
+   public Statement state;
    public void Connect(){
         try {
              co = DriverManager.getConnection("jdbc:mysql://localhost:3308/JavaProject","root","7205");
             System.out.println("HELLO DATABASES;");
+            state = co.createStatement();
         } catch (SQLException ex) {
             Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     
-   }
-   public void verifyData(){
-     
-          
    }
 }

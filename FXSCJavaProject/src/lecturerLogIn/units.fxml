@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="1023.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lecturerLogIn.UnitsController">
+   <children>
+      <ImageView fitHeight="124.0" fitWidth="1023.0" pickOnBounds="true" AnchorPane.bottomAnchor="560.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <image>
+            <Image url="@../images/maseno.png" />
+         </image>
+      </ImageView>
+      <Region layoutX="-2.0" layoutY="568.0" prefHeight="116.0" prefWidth="1023.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="373.0" layoutY="591.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="423.0" layoutY="642.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="426.0" layoutY="662.0" size="20" />
+      <Text layoutX="479.0" layoutY="639.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="479.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="219.0" layoutY="148.0" text="THE UNITS YOU HAVE TAKEN HIS SEMESTER ARE :" textFill="#f80606" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="280.0" style="-fx-text-alignment: center;" text="1. CCS 101   PRINCIPLES OF PROGRAMMING LANGUAGES.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="328.0" style="-fx-text-alignment: center;" text="2. CCS 102   PROGRAMMING IN C.">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="385.0" style="-fx-text-alignment: center;" text="3. CCS 103   PROGRAMMING IN PASCALS .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="TOP" layoutX="881.0" layoutY="498.0" onAction="#HandleExit" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: red;" text="EXIT .." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROWS_ALT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="32.0" layoutY="498.0" onAction="#HandleGoBack" prefHeight="41.0" prefWidth="118.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

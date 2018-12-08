@@ -26,6 +26,7 @@ public class loadNewPage {
     
     stag.setTitle("NEW WINDOW.");
     stag.setScene(new Scene(root1));
+    stag.setResizable(false);
     stag.show();
     
         } catch (Exception es) {

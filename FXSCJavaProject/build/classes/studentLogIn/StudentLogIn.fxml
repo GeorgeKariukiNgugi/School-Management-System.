@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="992.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentLogIn.StudentLogInController">
    <children>
-      <ImageView fx:id="view" fitHeight="133.0" fitWidth="992.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="view" fitHeight="133.0" fitWidth="992.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <Label layoutX="344.0" layoutY="229.0" text="Key In Your Details To Log In." textFill="#4c0bf2" underline="true">
          <font>
             <Font name="Times New Roman Bold" size="19.0" />
@@ -30,7 +30,8 @@
       <JFXTextField fx:id="txtusername" alignment="CENTER" layoutX="390.0" layoutY="317.0" prefHeight="31.0" prefWidth="207.0" promptText="username">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
-         </font></JFXTextField>
+         </font>
+      </JFXTextField>
       <Label layoutX="321.0" layoutY="390.0" text="Password  :" textFill="#f80808">
          <font>
             <Font name="Times New Roman Bold" size="18.0" />
@@ -40,8 +41,9 @@
       <JFXPasswordField fx:id="txtpassword" alignment="CENTER" layoutX="396.0" layoutY="421.0" prefHeight="31.0" prefWidth="207.0" promptText="password">
          <font>
             <Font name="Times New Roman Bold" size="20.0" />
-         </font></JFXPasswordField>
-      <Region layoutY="612.0" prefHeight="116.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" />
+         </font>
+      </JFXPasswordField>
+      <Region layoutY="612.0" prefHeight="116.0" prefWidth="992.0" style="-fx-background-color: lightBlue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
       <Text layoutX="357.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
          <font>
             <Font name="Times New Roman Bold" size="15.0" />
@@ -66,7 +68,6 @@
          <graphic>
             <FontAwesomeIconView glyphName="UNLOCK" size="20" style="-fx-fill: white;" />
          </graphic>
-        
       </JFXButton>
       <JFXCheckBox layoutX="364.0" layoutY="536.0" text="Remember Me ." textFill="#ee0808">
          <font>

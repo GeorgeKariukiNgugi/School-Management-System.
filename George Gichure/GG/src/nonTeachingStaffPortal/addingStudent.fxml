@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="915.0" prefWidth="1313.0" style="-fx-background-color: aliceBlue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nonTeachingStaffPortal.AddingStudentController">
+   <children>
+      <ImageView fitHeight="145.0" fitWidth="1315.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/maseno.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="384.0" layoutY="152.0" text="ADDING NEW STUDENT TO SYSTEM." textFill="#eb0b0b" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="30.0" />
+         </font>
+      </Label>
+      <Region layoutY="849.0" prefHeight="131.0" prefWidth="1315.0" style="-fx-background-color: lightBlue;" />
+      <Text layoutX="490.0" layoutY="894.0" strokeType="OUTSIDE" strokeWidth="0.0" text="              Maseno University.&#10;The Fountain of Excellence In Higher Education.&#10;">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <FontAwesomeIconView glyphName="PHONE" layoutX="540.0" layoutY="945.0" size="20" />
+      <FontAwesomeIconView glyphName="TWITTER" layoutX="543.0" layoutY="965.0" size="20" />
+      <Text layoutX="596.0" layoutY="942.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0792107437">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="596.0" layoutY="962.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@ masenouni">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Label layoutX="51.0" layoutY="255.0" text="First Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="fname" alignment="CENTER" layoutX="204.0" layoutY="271.0" promptText="First Name :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="166.0" layoutY="225.0" text="A. ) PERSONAL DETAILS . " textFill="#310af7" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="452.0" layoutY="256.0" text="Second Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="lname" alignment="CENTER" layoutX="616.0" layoutY="272.0" promptText="Second Name  :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="869.0" layoutY="256.0" text="Sur Name">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="sname" alignment="CENTER" layoutX="1022.0" layoutY="272.0" promptText="Sur Name :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="male" layoutX="170.0" layoutY="337.0" text="Male" textFill="#f20d0d">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="sex" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="42.0" layoutY="331.0" text="Gender :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXRadioButton fx:id="female" layoutX="170.0" layoutY="369.0" text="Female ." textFill="#f20d0d" toggleGroup="$sex">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXRadioButton>
+      <Label layoutX="450.0" layoutY="331.0" text="Phone Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="phone" alignment="CENTER" layoutX="616.0" layoutY="341.0" promptText="Phone Number .">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="877.0" layoutY="331.0" text="Email Address">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="email" alignment="CENTER" layoutX="1043.0" layoutY="341.0" promptText="Email Address">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="48.0" layoutY="411.0" text="ID Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="idNo" alignment="CENTER" layoutX="214.0" layoutY="421.0" promptText="ID Number :">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="463.0" layoutY="406.0" text="Campus :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="campus" layoutX="616.0" layoutY="422.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="864.0" layoutY="406.0" text="Begin Year .">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="beginYear" layoutX="1017.0" layoutY="422.0" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="139.0" layoutY="518.0" text="B. ) SCHOOL DETAILS . " textFill="#310af7" underline="true">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="565.0" text="School :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="school" layoutX="239.0" layoutY="581.0" onAction="#HandleComboBoxSchool" prefHeight="31.0" prefWidth="182.0" />
+      <Label layoutX="525.0" layoutY="565.0" text="Depertment :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="depertment" disable="true" layoutX="678.0" layoutY="581.0" onAction="#HandleComboboxDepertment" prefHeight="31.0" prefWidth="182.0" promptText="SELECT DEPERTMENT" />
+      <Label layoutX="941.0" layoutY="565.0" text="Programme :">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="programme" disable="true" layoutX="1094.0" layoutY="581.0" onAction="#HandleComboBoxProramme" prefHeight="31.0" prefWidth="182.0" promptText="SELECT PRORAMME." />
+      <Label layoutX="281.0" layoutY="668.0" text="ADMISSION NUMBER :" textFill="#e10808">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXTextField fx:id="admNos" alignment="CENTER" disable="true" layoutX="696.0" layoutY="668.0" promptText="Adm No :">
+         <font>
+            <Font name="Times New Roman Bold" size="26.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblpre" disable="true" layoutX="610.0" layoutY="668.0" text="Pref" textFill="#e10808">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <Label fx:id="lblpost" disable="true" layoutX="1009.0" layoutY="657.0" text="Post" textFill="#e10808">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="42.0" layoutY="772.0" onAction="#HandleGoBack" prefHeight="64.0" prefWidth="140.0" style="-fx-background-color: Blue;" text="GO BACK" textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_LEFT" size="20" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="next" buttonType="RAISED" contentDisplay="TOP" disable="true" layoutX="1025.0" layoutY="734.0" onAction="#HandleNext" prefHeight="102.0" prefWidth="253.0" style="-fx-background-color: green;" text="NEXT TO COMPLETE ." textFill="#f5eeee">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="#f2efef" glyphName="ARROW_RIGHT" size="40" wrappingWidth="27.714284896850586" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="control" layoutX="608.0" layoutY="204.0" text="Label" textFill="#f50707">
+         <font>
+            <Font name="Times New Roman Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

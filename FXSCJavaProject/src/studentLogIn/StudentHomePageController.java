@@ -9,6 +9,7 @@ import classes.textFileGetAdmno;
 import com.jfoenix.controls.JFXButton;
 import classes.DatabaseConnection;
 import classes.backAndExit;
+import classes.loadNewPage;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -66,6 +67,18 @@ public class StudentHomePageController implements Initializable {
     // java.io.File file = new java.io.File("data.txt");
      textFileGetAdmno files = new textFileGetAdmno();
      backAndExit buttonHandlers = new  backAndExit();
+     loadNewPage page = new loadNewPage();
+     
+     public void HandleRegisterReal(ActionEvent event){
+          page.loadNewPage("/studentLogIn/register.fxml");
+         ((Node)(event.getSource())).getScene().getWindow().hide();
+     }
+     
+     public void handleViewUnits(ActionEvent event){
+         page.loadNewPage("/studentLogIn/studentViewUnits.fxml");
+         ((Node)(event.getSource())).getScene().getWindow().hide();
+         
+     }
    public void HandleExit(ActionEvent event){
              buttonHandlers.handleExit();
        }
